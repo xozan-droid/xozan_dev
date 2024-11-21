@@ -1,0 +1,95 @@
+<div class="w-full h-screen">
+    <nav class="bg-white border-b border-gray-300">
+        <div class="flex justify-between items-center px-6">
+            <!-- Ícono de Menú (cyan) -->
+            <button id="menu-button" onclick="expandSidebar()">
+                <i class="fas fa-bars text-cyan-500 text-lg"></i>
+            </button>
+            <!-- Logo (centrado) -->
+            <div class="mx-auto">
+                <img src="https://www.emprenderconactitud.com/img/POC%20WCS%20(1).png" alt="logo" class="h-20 w-28">
+            </div>
+            <!-- Ícono de Notificación y Perfil -->
+            <div class="space-x-4">
+                <button>
+                    <i class="fas fa-bell text-cyan-500 text-lg"></i>
+                </button>
+                <!-- Botón de Perfil -->
+                <button>
+                    <i class="fas fa-user text-cyan-500 text-lg"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div class="flex-grow bg-gray-100">
+        <!-- Buscador -->
+        <div class="flex-grow flex items-center justify-center p-4">
+            <!-- Buscador -->
+            <div class="relative w-full max-w-md">
+                <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                    <i class="fas fa-search text-gray-400"></i>
+                </span>
+                <input type="text" 
+                       class="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-full text-sm placeholder-gray-400" 
+                       placeholder="Buscar..." />
+            </div>
+        </div>
+        
+
+        <!-- Secciones principales -->
+        <div class="grid grid-cols-2 gap-4 p-4">
+            <!-- Usuarios -->
+            <div class="bg-white p-4 rounded-md">
+                <h2 class="text-gray-600 text-lg font-semibold pb-4">Usuarios</h2>
+                <canvas id="usersChart" class="w-full h-40"></canvas>
+            </div>
+            <!-- Comercios -->
+            <div class="bg-white p-4 rounded-md">
+                <h2 class="text-gray-600 text-lg font-semibold pb-4">Comercios</h2>
+                <canvas id="commercesChart" class="w-full h-40"></canvas>
+            </div>
+            <!-- Autorizaciones Pendientes -->
+            <div class="bg-white p-4 rounded-md">
+                <h2 class="text-gray-600 text-lg font-semibold pb-4">Autorizaciones Pendientes</h2>
+                <table class="w-full table-auto">
+                    <thead>
+                        <tr class="text-sm">
+                            <th class="py-2 px-4 text-left">Foto</th>
+                            <th class="py-2 px-4 text-left">Nombre</th>
+                            <th class="py-2 px-4 text-right">Rol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-4"><img src="https://via.placeholder.com/40" alt="Foto de perfil" class="rounded-full h-10 w-10"></td>
+                            <td class="py-2 px-4">Juan Pérez</td>
+                            <td class="py-2 px-4 text-right">Administrador</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Transacciones -->
+            <div class="bg-white p-4 rounded-md">
+                <h2 class="text-gray-600 text-lg font-semibold pb-4">Transacciones</h2>
+                <table class="w-full table-auto">
+                    <thead>
+                        <tr class="text-sm">
+                            <th class="py-2 px-4 text-left">Nombre</th>
+                            <th class="py-2 px-4 text-left">Fecha</th>
+                            <th class="py-2 px-4 text-right">Monto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-4">Carlos Sánchez</td>
+                            <td class="py-2 px-4">27/07/2023</td>
+                            <td class="py-2 px-4 text-right">$1500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
